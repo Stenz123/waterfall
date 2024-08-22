@@ -42,9 +42,10 @@
     /* Comment the color theme you don't want to use */
 
     /* Dark Theme Colors */
-    --window-colour:               #1f2122;
-    --secondary-colour:            #141616;
-    --inverted-colour:             #FAFAFC;
+    --window-colour:               #1c1e20;
+    --secondary-colour:            #282a36;
+    --inverted-colour:             #e6e6e6;
+    --highlight-colour:            #663399; 
 
     /* Light Theme Colors
     --window-colour:               #FAFAFC;
@@ -52,7 +53,7 @@
     --inverted-colour:             #1E2021;
     */
 
-     
+
     /* Containter Tab Colours */
     --uc-identity-color-blue:      #7ED6DF;
     --uc-identity-color-turquoise: #55E6C1;
@@ -65,7 +66,7 @@
      
     
     /* URL colour in URL bar suggestions */
-    --urlbar-popup-url-color: var(--uc-identity-color-purple) !important;
+    --urlbar-popup-url-color: var(--highlight-colour) !important;
      
      
      
@@ -74,13 +75,13 @@
      +---+---+---+---+---+---+---*/
     
     /* global border radius */
-    --uc-border-radius: 0;
+    --uc-border-radius: 10px;
      
     /* dynamic url bar width settings */
     --uc-urlbar-width: clamp(250px, 50vw, 600px);
 
     /* dynamic tab width settings */
-    --uc-active-tab-width:   clamp( 50px, 18vw, 220px);
+    --uc-active-tab-width:   clamp( 50px, 15vw, 200px);
     --uc-inactive-tab-width: clamp( 50px, 15vw, 200px);
 
     /* if active always shows the tab close button */
@@ -100,7 +101,7 @@
 
      /* showing only the back button */
      #back-button{ display: -moz-inline-box !important; }
-     #forward-button{ display: none !important; }
+     #forward-button{ display: -moz-inline-box !important; }
      #stop-button{ display: none !important; }
      #reload-button{ display: none !important; }
 
@@ -144,7 +145,7 @@
 :root {
     
     --uc-theme-colour:                          var(--window-colour);
-    --uc-hover-colour:                          var(--secondary-colour);
+    --uc-hover-colour:                          var(--highlight-colour);
     --uc-inverted-colour:                       var(--inverted-colour);
     
     --button-bgcolor:                           var(--uc-theme-colour)    !important;
@@ -155,7 +156,7 @@
     --toolbarbutton-hover-background:           var(--uc-hover-colour)    !important;
     --toolbarbutton-active-background:          var(--uc-hover-colour)    !important;
     --toolbarbutton-border-radius:              var(--uc-border-radius)   !important;
-    --lwt-toolbar-field-focus:                  var(--uc-theme-colour)    !important;
+    --lwt-toolbar-field-focus:                  var(--highlight-colour)   !important;
     --toolbarbutton-icon-fill:                  var(--uc-inverted-colour) !important;
     --toolbar-field-focus-background-color:     var(--secondary-colour)   !important;
     --toolbar-field-color:                      var(--uc-inverted-colour) !important;
@@ -201,7 +202,7 @@ window,
     border: none !important;
     box-shadow: none !important;
     background: var(--uc-theme-colour) !important;
-
+    color: var(--uc-inverted-colour) !important;
 }
 
 
@@ -284,7 +285,7 @@ window,
   inset-inline-end: -8px !important;
   width: 16px !important; height: 16px !important;
 
-  border-radius: 10px !important;
+  border-radius: 3px !important;
 
 }
 
@@ -432,3 +433,25 @@ window,
 .identity-color-red       { --identity-tab-color: var(--uc-identity-color-red)       !important; --identity-icon-color: var(--uc-identity-color-red)       !important; }
 .identity-color-pink      { --identity-tab-color: var(--uc-identity-color-pink)      !important; --identity-icon-color: var(--uc-identity-color-pink)      !important; }
 .identity-color-purple    { --identity-tab-color: var(--uc-identity-color-purple)    !important; --identity-icon-color: var(--uc-identity-color-purple)    !important; }
+
+
+.titlebar-min {display:none!important;}
+.titlebar-max {display:none!important;}
+.titlebar-restore {display:none!important;}
+.titlebar-close {display:none!important;}
+
+
+/* Hover effects */
+.urlbarView-row:hover > .urlbarView-row-inner,
+.urlbarView-row[selected] > .urlbarView-row-inner {
+    background:  !important;
+}
+
+#nav-bar {
+    background: transparent !important;
+}
+
+/* Updated text color for better readability */
+#urlbar, #urlbar * {
+    color: #fff !important;
+}
