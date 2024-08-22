@@ -455,3 +455,6 @@ window,
 #urlbar, #urlbar * {
     color: #fff !important;
 }
+
+
+#urlbar[focused] > #urlbar-background, #urlbar[breakout][breakout-extend] > #urlbar-background,  #searchbar { border: 1px solid var(--uc-hover-colour) !important; outline: none !important; }
